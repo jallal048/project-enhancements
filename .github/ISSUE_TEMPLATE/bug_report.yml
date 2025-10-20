@@ -1,0 +1,168 @@
+name: 🐛 Bug Report
+description: Reporta un error para ayudarnos a mejorar
+title: "[BUG]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🙏 Gracias por tomarte el tiempo de reportar este bug. 
+        Tu reporte nos ayuda a hacer el proyecto mejor para todos.
+  
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: 📋 Prerequisitos
+      description: Antes de reportar el bug, por favor confirma que:
+      options:
+        - label: He buscado en issues existentes y no encontré uno similar
+          required: true
+        - label: He leído la documentación relevante
+          required: true
+        - label: Estoy usando la última versión disponible
+          required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Descripción del Bug
+      description: Una descripción clara y concisa de cuál es el bug.
+      placeholder: "Cuando hago X, esperaba que pasara Y, pero en su lugar pasó Z..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔄 Pasos para Reproducir
+      description: Pasos detallados para reproducir el comportamiento
+      placeholder: |
+        1. Ir a '...'
+        2. Hacer click en '...'
+        3. Scrollear hasta '...'
+        4. Ver error
+      value: |
+        1. 
+        2. 
+        3. 
+        4. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Comportamiento Esperado
+      description: Una descripción clara y concisa de lo que esperabas que pasara.
+      placeholder: "Esperaba que..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Comportamiento Actual
+      description: Una descripción clara y concisa de lo que realmente pasó.
+      placeholder: "En su lugar..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots o Videos
+      description: Si es aplicable, añade screenshots o videos para ayudar a explicar el problema.
+      placeholder: "Arrastra y suelta imágenes o videos aquí, o pega URLs..."
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 💻 Información del Entorno
+      description: Completa la siguiente información
+      value: |
+        - **OS**: [ej. Windows 10, macOS 12.1, Ubuntu 20.04]
+        - **Navegador**: [ej. Chrome 96, Firefox 95, Safari 15]
+        - **Versión del Proyecto**: [ej. v1.2.3]
+        - **Node.js**: [ej. v16.13.0]
+        - **npm/yarn**: [ej. npm v8.1.0]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📜 Logs Relevantes
+      description: |
+        Incluye cualquier log de error relevante. 
+        **Tip**: Puedes usar la consola del desarrollador (F12) para obtener logs.
+      render: shell
+      placeholder: |
+        Error: Something went wrong
+            at Function.something (/path/to/file.js:123:45)
+            at Object.<anonymous> (/path/to/file.js:67:89)
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🔥 Severidad
+      description: ¿Qué tan severo es este bug?
+      options:
+        - "Crítico - El sistema no funciona"
+        - "Alto - Funcionalidad principal no funciona"
+        - "Medio - Funcionalidad secundaria afectada"
+        - "Bajo - Problema menor o cosmético"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 🔁 Frecuencia
+      description: ¿Con qué frecuencia ocurre este bug?
+      options:
+        - "Siempre (100%)"
+        - "Frecuentemente (75-99%)"
+        - "A veces (25-74%)"
+        - "Raramente (1-24%)"
+        - "Una sola vez"
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 🔧 Workaround
+      description: ¿Has encontrado alguna forma temporal de solucionar este problema?
+      placeholder: "Actualmente puedo evitar el problema haciendo..."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Contexto Adicional
+      description: |
+        Añade cualquier otro contexto sobre el problema aquí.
+        Por ejemplo: ¿Cuándo empezó a pasar? ¿Hay patrones específicos?
+      placeholder: "Información adicional que pueda ser útil..."
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribución
+      description: ¿Estarías dispuesto/a a ayudar a solucionar este problema?
+      options:
+        - label: Estaría dispuesto/a a enviar un PR para solucionar este issue
+        - label: Puedo ayudar a testear una solución
+        - label: Puedo proporcionar más información si es necesario
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🙏 **¡Gracias por tu reporte!** 
+        
+        Nuestro equipo revisará tu issue y responderá lo antes posible.
+        Mientras tanto, puedes:
+        - 🔔 Suscribirte a las notificaciones de este issue
+        - 💬 Unirte a las discusiones de la comunidad
+        - 📚 Revisar la documentación para posibles soluciones
