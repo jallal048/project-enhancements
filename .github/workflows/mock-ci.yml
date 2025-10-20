@@ -1,0 +1,29 @@
+name: 🧪 Demo Server CI
+
+on:
+  push:
+    paths:
+      - 'thefreed-v1-improvements/**'
+  pull_request:
+    paths:
+      - 'thefreed-v1-improvements/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: thefreed-v1-improvements/04-demo-server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: npm ci || npm install
+      - name: Run demo server tests
+        run: |
+          cd ..
+          npm ci || true
+          cd 04-demo-server
+          npm test
