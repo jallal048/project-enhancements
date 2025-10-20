@@ -1,0 +1,228 @@
+name: ✨ Feature Request
+description: Propón una nueva funcionalidad para mejorar el proyecto
+title: "[FEATURE]: "
+labels: ["enhancement", "needs-evaluation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🚀 **¡Gracias por tu idea!** 
+        
+        Las mejores funcionalidades nacen de necesidades reales de los usuarios.
+        Ayúdanos a entender tu propuesta completando esta información.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: 📋 Prerequisitos
+      description: Antes de proponer la funcionalidad, confirma que:
+      options:
+        - label: He buscado en issues existentes y no hay una propuesta similar
+          required: true
+        - label: He revisado la roadmap del proyecto
+          required: true
+        - label: Esta funcionalidad encaja con los objetivos del proyecto
+          required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🎯 Problema a Resolver
+      description: |
+        ¿Tu feature request está relacionada con un problema? 
+        Describe claramente el problema o limitación actual.
+      placeholder: |
+        Actualmente es frustrante cuando...
+        No es posible hacer X porque...
+        Los usuarios se quejan de que...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Solución Propuesta
+      description: Describe claramente qué funcionalidad te gustaría que se añadiera.
+      placeholder: |
+        Me gustaría que el sistema pudiera...
+        Sería genial si hubiera una opción para...
+        Propongo añadir una funcionalidad que...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: 🎭 Casos de Uso
+      description: |
+        Describe escenarios específicos donde esta funcionalidad sería útil.
+        Incluye diferentes tipos de usuarios si es relevante.
+      placeholder: |
+        **Caso 1: Desarrollador principiante**
+        - Como desarrollador nuevo, quiero...
+        - Para poder...
+        - De modo que...
+
+        **Caso 2: Usuario avanzado**
+        - Como usuario experimentado, necesito...
+        - Para...
+        - Porque...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternativas Consideradas
+      description: |
+        Describe otras soluciones o funcionalidades que has considerado.
+        ¿Por qué esta propuesta es mejor?
+      placeholder: |
+        He considerado:
+        1. Usar la biblioteca X, pero...
+        2. Implementar Y de otra forma, pero...
+        3. No hacer nada, pero esto no resuelve...
+
+  - type: dropdown
+    id: user_type
+    attributes:
+      label: 👤 Tipo de Usuario
+      description: ¿Qué tipo de usuario se beneficiaría más de esta funcionalidad?
+      options:
+        - "Desarrolladores principiantes"
+        - "Desarrolladores experimentados"  
+        - "Administradores de sistema"
+        - "Usuarios finales"
+        - "Todos los usuarios"
+        - "Casos de uso específicos"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⚡ Prioridad Percibida
+      description: ¿Qué tan importante es esta funcionalidad para ti?
+      options:
+        - "Crítica - Bloquea mi trabajo actual"
+        - "Alta - Mejoraría significativamente mi flujo"
+        - "Media - Sería una mejora agradable"
+        - "Baja - Nice to have"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: 🧩 Complejidad Estimada
+      description: ¿Qué tan compleja crees que sería implementar esta funcionalidad?
+      options:
+        - "No estoy seguro/a"
+        - "Simple - Cambios menores"
+        - "Moderada - Requiere algunos cambios"
+        - "Compleja - Requiere cambios arquitectónicos"
+        - "Muy compleja - Requiere reestructuración mayor"
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 🔨 Sugerencias de Implementación
+      description: |
+        Si tienes ideas sobre cómo implementar esta funcionalidad, compártelas.
+        No es obligatorio, pero puede ser muy útil.
+      placeholder: |
+        Posibles enfoques:
+        1. Añadir una nueva API que...
+        2. Modificar el componente X para que...
+        3. Crear un nuevo módulo que...
+        
+        Consideraciones técnicas:
+        - Performance: ...
+        - Compatibilidad: ...
+        - Testing: ...
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: 🎨 Mockups o Ejemplos
+      description: |
+        Si es una funcionalidad de UI/UX, añade mockups, wireframes o ejemplos.
+        Para APIs, incluye ejemplos de uso.
+      placeholder: |
+        // Ejemplo de API propuesta
+        const result = await newFeature.doSomething({
+          option1: 'value',
+          option2: true
+        });
+        
+        O arrastra imágenes de mockups aquí...
+
+  - type: textarea
+    id: breaking_changes
+    attributes:
+      label: ⚠️ Cambios Incompatibles
+      description: |
+        ¿Esta funcionalidad podría romper la compatibilidad existente?
+        ¿Requiere cambios en la API pública?
+      placeholder: |
+        Esta funcionalidad:
+        - ✅ Es totalmente compatible hacia atrás
+        - ⚠️ Requiere cambios menores en configuración
+        - 🚨 Introduce cambios incompatibles porque...
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: 🧪 Estrategia de Testing
+      description: ¿Cómo se podría testear esta funcionalidad?
+      placeholder: |
+        Tests necesarios:
+        - Unit tests para...
+        - Integration tests para...
+        - E2E tests para...
+        - Manual testing de...
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribución
+      description: ¿Estarías dispuesto/a a ayudar con la implementación?
+      options:
+        - label: Puedo ayudar con el diseño y especificaciones
+        - label: Estaría dispuesto/a a implementar esta funcionalidad
+        - label: Puedo ayudar con testing y feedback
+        - label: Puedo ayudar con documentación
+        - label: Solo puedo proporcionar feedback durante el desarrollo
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Información Adicional
+      description: |
+        Cualquier otra información que consideres relevante.
+        Enlaces a recursos, ejemplos en otros proyectos, etc.
+      placeholder: |
+        Enlaces útiles:
+        - Similar feature en proyecto X: ...
+        - Documentación relevante: ...
+        - Discusiones relacionadas: ...
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🎉 **¡Gracias por tu propuesta!**
+        
+        Nuestro equipo evaluará tu feature request y lo discutirá en las próximas reuniones.
+        
+        **Siguiente pasos:**
+        1. 🏷️ Etiquetaremos y priorizaremos tu propuesta
+        2. 💬 Puede que hagamos preguntas adicionales
+        3. 🗺️ Si es aprobada, la añadiremos a la roadmap
+        4. 🚀 ¡Buscaremos voluntarios para implementarla!
+        
+        Mientras tanto:
+        - 🔔 Suscríbete a las notificaciones
+        - 💬 Únete a las discusiones de la comunidad
+        - 👥 Comparte con otros que puedan beneficiarse
